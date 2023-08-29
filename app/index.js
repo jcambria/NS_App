@@ -8,10 +8,11 @@ import {
   Modal,
   FlatList,
 } from "react-native";
+
 import { Stack, useRouter } from "expo-router";
 
 import { COLORS, icons, images, SIZES } from "../constants";
-import { ScreenHeaderBtn, Welcome } from "../components"; // Make sure you have the correct path to ScreenHeaderBtn
+import { ScreenHeaderBtn, Welcome, Nearbyjobs, Popularjobs, } from "../components"; // Make sure you have the correct path to ScreenHeaderBtn
 
 
 const Home = () => {
@@ -23,7 +24,7 @@ const Home = () => {
   };
 
   return (
-    <SafeAreaView style={{ flex: 1, backgroundColor: COLORS.lightWhite }}>
+    <SafeAreaView style={{ flex: 1, backgroundColor: COLORS.transparent }}>
       <Stack.Screen
         options={{
           headerStyle: { backgroundColor: COLORS.lightWhite },
@@ -38,7 +39,7 @@ const Home = () => {
             </TouchableOpacity>
           ),
           headerRight: () => (
-            <ScreenHeaderBtn iconsUrl={images.profile} dimension="100%" />
+            <ScreenHeaderBtn iconsUrl={images.menu} dimension="100%" />
           ),
           headerTitle: "Next Script",
         }}
@@ -47,6 +48,7 @@ const Home = () => {
       <ScrollView showsVerticalScrollIndicator={false}>
         <View style={{ flex: 1, padding: SIZES.medium }}>
           <Welcome />
+          
         </View>
       </ScrollView>
 

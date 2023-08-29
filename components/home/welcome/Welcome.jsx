@@ -1,15 +1,10 @@
 import React, { useState } from "react";
-import {
-  View,
-  Text,
-  TouchableOpacity,
-  Image,
-  FlatList,
-} from "react-native";
+import { View, Text, TouchableOpacity, Image, FlatList } from "react-native";
 import { Camera } from "expo-camera";
 
 import styles from "./welcome.style"; // Assuming you have defined styles in welcome.style.js
 import { icons, SIZES } from "../../../constants";
+import { router } from "expo-router";
 
 const appTypes = ["Count Pills", "Next Fill", "Follow Up"];
 
